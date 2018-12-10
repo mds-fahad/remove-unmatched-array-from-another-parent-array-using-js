@@ -1,0 +1,16 @@
+<script>
+var mainArry = ["1","2","3","4","5","6"];
+var minusArray = ["3","1",'8',"4",'7'];
+
+function removeItem(mainArry , minusArray){
+    for(var i in minusArray){
+         mainArry.indexOf(minusArray[i]) !== -1 && mainArry.splice(mainArry.indexOf(minusArray[i]), 1);
+				 mainArry = mainArry.filter(e => e !== minusArray[i]);
+    }
+    return mainArry;
+}
+
+alert(removeItem(mainArry, minusArray));
+// here we will find output = 2 , 5 , 6 
+
+</script>
